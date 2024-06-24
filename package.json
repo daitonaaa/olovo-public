@@ -1,0 +1,25 @@
+{
+  "name": "olovo-public",
+  "version": "1.0.0",
+  "description": "## Требования Node.JS >16, PostgreSQL 12",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "lint:admin:fix": "cd admin-ui && npm run lint:all:fix",
+    "lint:backend:fix": "cd backend && npm run lint:all:fix",
+    "lint:client": "cd client && npm run lint",
+    "lint:all:fix": "npm run lint:admin:fix && npm run lint:backend:fix && npm run lint:client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daitonaaa/olovo-public.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daitonaaa/olovo-public/issues"
+  },
+  "homepage": "https://github.com/daitonaaa/olovo-public#readme"
+}

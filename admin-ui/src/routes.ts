@@ -1,0 +1,15 @@
+export const routes = {
+  login: '/login',
+  home: '/',
+  detailPage: '/detailPage',
+  detailPageById: '/detailPage/:id',
+  editComponent: '/component/:id/edit',
+  createComponent: '/component/new',
+  components: '/components',
+  createPage: '/createPage',
+  settings: '/settings',
+  menu: '/menu',
+  crudList: '/crud/:name',
+  crudEdit: '/crud/:name/:slug',
+  crudCreateItem: '/crud/:name/new',
+};
