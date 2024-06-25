@@ -14,6 +14,7 @@ export interface ThemePalette {
     grey: string;
     greyLight: string;
     whiteGrey: string;
+    black: string;
   };
   text: {
     primary: string;
