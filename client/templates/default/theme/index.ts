@@ -7,6 +7,7 @@ const templateTheme: Omit<StyleTheme, 'utils'> = {
       grey: '#4F4F4F',
       greyLight: '#353535',
       whiteGrey: '#E0E0E0',
+      black: '#0D0E0E',
     },
     text: {
       primary: '#FFFFFF',
