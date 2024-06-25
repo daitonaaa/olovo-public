@@ -3,21 +3,14 @@ import { StyleTheme } from '@/core/theme-utils/types';
 const templateTheme: Omit<StyleTheme, 'utils'> = {
   palette: {
     main: {
-      blue: '#0096CB',
-      blueLight: '#52BDD1',
-      blueGradient: 'linear-gradient(23.82deg, #0096CB 22.28%, #71CFDC 90.31%)',
-      brown: '#997D65',
-      brownLight: '#BBA585',
-      brownGradient: 'linear-gradient(135.5deg, #BBA585 13.43%, #997D65 85.1%);\n',
-      blueLight2: '#EBF6F8',
-      blueGray: '#94999D',
-      brownUltraLight: '#ECE8E2',
+      darkGrey: '#1E1E1E',
+      gray: '#4F4F4F',
+      grayLight: '#353535',
+      whiteGray: '#E0E0E0',
     },
     text: {
-      primary: '#25373E',
-      secondary: '#97928E',
       white: '#FFFFFF',
-      blue: '#00AEEF',
+      grey: '#BDBDBD',
     },
     system: {
       error: '#D8514B',
@@ -66,6 +59,11 @@ const templateTheme: Omit<StyleTheme, 'utils'> = {
       weight: 400,
       lineHeight: '20px',
       size: '14px',
+    },
+    medium: {
+      weight: 500,
+      lineHeight: '22px',
+      size: '16px',
     },
   },
   screenSizes: {
