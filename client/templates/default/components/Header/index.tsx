@@ -1,40 +1,33 @@
 import { MenuRecordModel } from '@/core/admin/types';
 import React from 'react';
-
-import { BlockContact, BlockMeny, BlockText, Content, Desc, Meny, Title, Wrapper } from './styled';
+import { BlockContact, BlockMeny, BlockText, Content, Desc, Menu, Title, Wrapper } from './styled';
 import Link from 'next/link';
 import { ArrowButton } from '../ArrowButton';
+import { Cursor } from '@/currentTemplate/theme/components';
 
 interface HeaderProps {
   menu: MenuRecordModel[];
 }
 
-export const Header: React.FC<HeaderProps> = ({ menu }) => {
-  console.log(menu);
+const menuData = [
+  { label: 'Продукция', url: 'products', items: [], id: 1, order: 1 },
+  { label: 'Услуги', url: 'services', items: [], id: 2, order: 2 },
+  { label: 'О компании', url: 'about', items: [], id: 3, order: 3 },
+  { label: 'Контакты', url: 'contact', items: [], id: 3, order: 3 },
+];
 
+export const Header: React.FC<HeaderProps> = ({ menu }) => {
   return (
     <Wrapper>
       <BlockMeny>
-        <img src="/static/icon/logo.svg" />
-        <Meny>
-          {/* {menu.map((item) => {
+        <img src="/assets/icon/logo.svg" />
+        <Menu>
+          {menuData.map((item) => (
             <Link href={item.url} key={item.id}>
               <a>{item.label}</a>
-            </Link>;
-          })} */}
-          <Link href={'/'}>
-            <a>Продукция</a>
-          </Link>
-          <Link href={'/'}>
-            <a>Услуги</a>
-          </Link>
-          <Link href={'/'}>
-            <a>О компании</a>
-          </Link>
-          <Link href={'/'}>
-            <a>Контакты</a>
-          </Link>
-        </Meny>
+            </Link>
+          ))}
+        </Menu>
       </BlockMeny>
       <Content>
         <BlockText>
@@ -46,9 +39,15 @@ export const Header: React.FC<HeaderProps> = ({ menu }) => {
           <ArrowButton title="Перейти в каталог " />
         </BlockText>
         <BlockContact>
-          <img src="/static/icon/phone.svg" />
-          <img src="/static/icon/whatsapp.svg" />
-          <img src="/static/icon/message.svg" />
+          <Cursor>
+            <img src="/assets/icon/phone.svg" />
+          </Cursor>
+          <Cursor>
+            <img src="/assets/icon/whatsapp.svg" />
+          </Cursor>
+          <Cursor>
+            <img src="/assets/icon/message.svg" />
+          </Cursor>
         </BlockContact>
       </Content>
     </Wrapper>

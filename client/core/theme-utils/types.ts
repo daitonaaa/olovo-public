@@ -11,13 +11,13 @@ export interface StyleThemeTextSize {
 export interface ThemePalette {
   main: {
     darkGrey: string;
-    gray: string;
-    grayLight: string;
-    whiteGray: string;
+    grey: string;
+    greyLight: string;
+    whiteGrey: string;
   };
   text: {
-    white: string;
-    grey: string;
+    primary: string;
+    secondary: string;
   };
   system: {
     error: string;
@@ -64,6 +64,10 @@ export interface StyleTheme {
   };
   animate: {
     base: string;
+  };
+
+  zIndex: {
+    menu: number;
   };
   __mobilePatch?: Omit<DeepPartial<StyleTheme>, 'screenSizes'>;
 }

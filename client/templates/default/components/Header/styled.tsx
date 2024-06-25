@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background-image: url('/static/images/header.png');
+  background-image: url('/assets/images/header.png');
   background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
 
   &::before {
     content: '';
-    background-image: url('/static/images/shadow_header.png');
+    background-image: url('/assets/images/shadow_header.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -23,7 +23,6 @@ export const Wrapper = styled.div`
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 0;
   }
 `;
 
@@ -33,14 +32,14 @@ export const BlockMeny = styled.div`
   gap: 64px;
   margin-bottom: 169px;
   position: relative;
-  z-index: 9;
+  z-index: ${({ theme }) => theme.zIndex.menu};
 `;
 
-export const Meny = styled.div`
+export const Menu = styled.div`
   display: flex;
   gap: 60px;
   & > a {
-    color: ${({ theme }) => theme.palette.text.white};
+    color: ${({ theme }) => theme.palette.text.primary};
     font-size: ${({ theme }) => theme.textSizes.medium.size};
     line-height: ${({ theme }) => theme.textSizes.medium.lineHeight};
     font-weight: ${({ theme }) => theme.textSizes.medium.weight};
@@ -68,24 +67,16 @@ export const BlockContact = styled.div`
   gap: ${({ theme }) => theme.spaces.xl};
   padding: 4px 14px 4px 0;
   border-right: 2px solid #ffffff;
-
-  & > img {
-    transition: 0.2s;
-    &:hover {
-      cursor: pointer;
-      opacity: 0.8;
-    }
-  }
 `;
 
 export const Title = styled.h1`
-  color: ${({ theme }) => theme.palette.text.white};
+  color: ${({ theme }) => theme.palette.text.primary};
   margin-bottom: ${({ theme }) => theme.spaces.l};
 `;
 
 export const Desc = styled.div`
   max-width: 749px;
-  color: ${({ theme }) => theme.palette.text.white};
+  color: ${({ theme }) => theme.palette.text.primary};
   font-size: 24px;
   font-weight: 400;
   line-height: 32.78px;

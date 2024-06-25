@@ -11,43 +11,14 @@ export const GeneralButtonCSS = styled.button`
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  color: ${({ theme }) => theme.palette.text.white};
+  color: ${({ theme }) => theme.palette.text.primary};
   border-radius: 6px;
 `;
 
-export const BlueButton = styled(GeneralButtonCSS)`
-  background: ${({ theme }) => theme.palette.main.blueGradient};
+export const Cursor = styled.div`
+  transition: 0.2s;
   &:hover {
-    background: linear-gradient(
-      0deg,
-      ${({ theme }) => theme.palette.main.blue} 0%,
-      ${({ theme }) => theme.palette.main.blue} 100%
-    );
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    pointer-events: none;
-  }
-`;
-
-export const BrownButton = styled(GeneralButtonCSS)`
-  background: ${({ theme }) => theme.palette.main.brownGradient};
-  &:hover {
-    background: linear-gradient(
-      0deg,
-      ${({ theme }) => theme.palette.main.brown} 0%,
-      ${({ theme }) => theme.palette.main.brown} 100%
-    );
-  }
-`;
-
-export const WhiteButton = styled(GeneralButtonCSS)`
-  border: 1px solid;
-  border-color: ${({ theme }) => theme.palette.main.blueLight};
-  color: ${({ theme }) => theme.palette.main.blueLight};
-
-  :hover {
+    cursor: pointer;
     opacity: 0.8;
   }
 `;

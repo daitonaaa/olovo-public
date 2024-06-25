@@ -4,13 +4,13 @@ const templateTheme: Omit<StyleTheme, 'utils'> = {
   palette: {
     main: {
       darkGrey: '#1E1E1E',
-      gray: '#4F4F4F',
-      grayLight: '#353535',
-      whiteGray: '#E0E0E0',
+      grey: '#4F4F4F',
+      greyLight: '#353535',
+      whiteGrey: '#E0E0E0',
     },
     text: {
-      white: '#FFFFFF',
-      grey: '#BDBDBD',
+      primary: '#FFFFFF',
+      secondary: '#BDBDBD',
     },
     system: {
       error: '#D8514B',
@@ -89,6 +89,10 @@ const templateTheme: Omit<StyleTheme, 'utils'> = {
   },
   animate: {
     base: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+  },
+
+  zIndex: {
+    menu: 2,
   },
 };
 
