@@ -9,7 +9,7 @@ export const ArrowButton: React.FC<ButtonProps> = ({ title = '' }) => {
   return (
     <Block>
       <Title>{title}</Title>
-      <img src="/static/icon/arrow_button.svg" />
+      <img src="/assets/icon/arrow_button.svg" />
     </Block>
   );
 };
