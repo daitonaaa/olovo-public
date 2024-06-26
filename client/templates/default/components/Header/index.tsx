@@ -1,6 +1,6 @@
 import { MenuRecordModel } from '@/core/admin/types';
 import React from 'react';
-import { BlockContact, BlockMeny, BlockText, Content, Desc, Menu, Title, Wrapper } from './styled';
+import { BlockContact, BlockMenu, BlockText, Content, Desc, Menu, Title, Wrapper } from './styled';
 import Link from 'next/link';
 import { ArrowButton } from '../ArrowButton';
 import { Cursor } from '@/currentTemplate/theme/components';
@@ -19,16 +19,16 @@ const menuData = [
 export const Header: React.FC<HeaderProps> = ({ menu }) => {
   return (
     <Wrapper>
-      <BlockMeny>
+      <BlockMenu>
         <img src="/assets/icon/logo.svg" />
         <Menu>
           {menuData.map((item) => (
             <Link href={item.url} key={item.id}>
-              <a>{item.label}</a>
+              <a className="menu__link">{item.label}</a>
             </Link>
           ))}
         </Menu>
-      </BlockMeny>
+      </BlockMenu>
       <Content>
         <BlockText>
           <Title>Урал Олово металлургическая компания </Title>

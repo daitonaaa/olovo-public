@@ -59,7 +59,7 @@ export const Contact = styled.div`
   align-items: center;
   gap: 20px;
 
-  & > a {
+  .contact__link {
     color: ${({ theme }) => theme.palette.text.primary};
     text-decoration: unset;
   }
@@ -76,7 +76,7 @@ export const ContactPayment = styled.div`
   padding-left: 48px;
   gap: 4px;
 
-  & > a {
+  .contact-payment__link {
     color: ${({ theme }) => theme.palette.text.primary};
     text-decoration: unset;
   }
@@ -96,7 +96,7 @@ export const MenuBlock = styled.div`
   gap: ${({ theme }) => theme.spaces.l};
   padding-right: 115px;
 
-  & > a {
+  .menu-block__link {
     text-decoration: unset;
     color: ${({ theme }) => theme.palette.text.primary};
     font-size: 16px;

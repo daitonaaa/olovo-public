@@ -50,17 +50,23 @@ export const Footer: React.FC<FooterProps> = () => {
           <ContactPhone>
             <Contact>
               <img src="assets/icon/footer_phone.svg" />
-              <a href="tel:88002225285">8 800 222 52 85</a>
+              <a href="tel:88002225285" className="contact__link">
+                8 800 222 52 85
+              </a>
             </Contact>
 
             <ContactPayment>
               <span>По вопросам оплаты счетов:</span>
-              <a href="tel:83433825285">8 343 382 52 85</a>
+              <a href="tel:83433825285" className="contact-payment__link">
+                8 343 382 52 85
+              </a>
             </ContactPayment>
           </ContactPhone>
           <Contact>
             <img src="assets/icon/footer_message.svg" />
-            <a href="malito:info@ural-olovo.ru">info@ural-olovo.ru</a>
+            <a href="malito:info@ural-olovo.ru" className="contact__link">
+              info@ural-olovo.ru
+            </a>
           </Contact>
           <Contact>
             <img src="assets/icon/map.svg" />
@@ -70,7 +76,7 @@ export const Footer: React.FC<FooterProps> = () => {
         <MenuBlock>
           {menuData.map((item) => (
             <Link href={item.url} key={item.id}>
-              <a>{item.label}</a>
+              <a className="menu-block__link">{item.label}</a>
             </Link>
           ))}
         </MenuBlock>

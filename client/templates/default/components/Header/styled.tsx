@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const BlockMeny = styled.div`
+export const BlockMenu = styled.div`
   display: flex;
   align-items: flex-end;
   gap: 64px;
@@ -38,7 +38,7 @@ export const BlockMeny = styled.div`
 export const Menu = styled.div`
   display: flex;
   gap: 60px;
-  & > a {
+  .menu__link {
     color: ${({ theme }) => theme.palette.text.primary};
     font-size: ${({ theme }) => theme.textSizes.medium.size};
     line-height: ${({ theme }) => theme.textSizes.medium.lineHeight};
