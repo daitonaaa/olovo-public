@@ -10,21 +10,14 @@ export interface StyleThemeTextSize {
 
 export interface ThemePalette {
   main: {
-    blue: string;
-    blueLight: string;
-    blueGradient: string;
-    brown: string;
-    brownLight: string;
-    brownGradient: string;
-    blueLight2: string;
-    blueGray: string;
-    brownUltraLight: string;
+    darkGrey: string;
+    grey: string;
+    greyLight: string;
+    whiteGrey: string;
   };
   text: {
     primary: string;
     secondary: string;
-    white: string;
-    blue: string;
   };
   system: {
     error: string;
@@ -42,6 +35,7 @@ export interface StyleTheme {
     body: StyleThemeTextSize;
     bodySmall: StyleThemeTextSize;
     caption: StyleThemeTextSize;
+    medium: StyleThemeTextSize;
   };
   typography: {
     fontFamily: string;
@@ -70,6 +64,10 @@ export interface StyleTheme {
   };
   animate: {
     base: string;
+  };
+
+  zIndex: {
+    menu: number;
   };
   __mobilePatch?: Omit<DeepPartial<StyleTheme>, 'screenSizes'>;
 }

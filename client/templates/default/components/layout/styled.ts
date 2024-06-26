@@ -2,5 +2,5 @@ import styled from 'styled-components';
 
 export const Main = styled.main`
   margin: 0 auto;
-  background: #ebf6f8;
+  background: ${({ theme }) => theme.palette.main.darkGrey};
 `;
