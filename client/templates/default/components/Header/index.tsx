@@ -13,7 +13,7 @@ const menuData = [
   { label: 'Продукция', url: 'products', items: [], id: 1, order: 1 },
   { label: 'Услуги', url: 'services', items: [], id: 2, order: 2 },
   { label: 'О компании', url: 'about', items: [], id: 3, order: 3 },
-  { label: 'Контакты', url: 'contact', items: [], id: 3, order: 3 },
+  { label: 'Контакты', url: 'contact', items: [], id: 4, order: 3 },
 ];
 
 export const Header: React.FC<HeaderProps> = ({ menu }) => {

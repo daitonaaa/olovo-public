@@ -28,7 +28,7 @@ export const Products: React.FC = () => {
 
       <ListProducts>
         {productsData.map((item) => (
-          <CardProduct item={item} />
+          <CardProduct item={item} key={item.id} />
         ))}
       </ListProducts>
     </Wrapper>
