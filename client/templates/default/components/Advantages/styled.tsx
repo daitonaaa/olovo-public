@@ -27,6 +27,8 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   gap: 22px;
+  padding-top: 47px;
+  border-top: 1px solid #4f4f4f;
 `;
 
 export const Block = styled.div<{ background: string }>`
