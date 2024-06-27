@@ -1,4 +1,3 @@
-import React from 'react';
 import { TitleBlock, Wrapper, Text, Content, Block, Desc, Title } from './styled';
 
 const data = [
