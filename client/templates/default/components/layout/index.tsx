@@ -5,6 +5,7 @@ import { Header } from '@/currentTemplate/components/Header';
 import { Footer } from '@/currentTemplate/components/Footer';
 import { Products } from '../Products';
 import { About } from '../About';
+import { Advantages } from '../Advantages';
 
 export const PageDefaultLayout = (props: PropsWithChildren<LayoutOwnProps>) => {
   const { children, backgroundColor, pageProps } = props;
@@ -17,6 +18,7 @@ export const PageDefaultLayout = (props: PropsWithChildren<LayoutOwnProps>) => {
       <Main style={{ backgroundColor }}>
         <Products />
         <About />
+        <Advantages />
       </Main>
       <Footer menu={menuData['FOOTER_MENU'] || []} />
     </>
