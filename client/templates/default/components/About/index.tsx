@@ -10,6 +10,11 @@ import {
   InfoBlock,
   BlockImage,
 } from './styled';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay } from 'swiper';
 
 const data = [
   { title: '>10', id: 1, desc: 'лет работы' },
@@ -64,7 +69,22 @@ export const About: React.FC = () => {
       </Wrapper>
 
       <BlockImage>
-        <img src="assets/images/about_bottom.png" />
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay]}
+        >
+          <SwiperSlide>
+            <img src="assets/images/about_bottom.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="assets/images/about_bottom_2.png" />
+          </SwiperSlide>
+        </Swiper>
       </BlockImage>
     </>
   );
