@@ -25,4 +25,6 @@ export const Text = styled.div`
 
 export const BlockMap = styled.div`
   padding-top: 47px;
+  width: 100%;
+  height: 595px;
 `;

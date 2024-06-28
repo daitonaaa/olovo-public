@@ -16,8 +16,15 @@ const ComponentMap = () => {
       <BlockMap>
         <YMaps>
           <Map
-            defaultState={{ center: [56.75, 60.57], zoom: 6 }}
+            defaultState={{ center: [56.772769, 60.614102], zoom: 14 }}
             style={{ width: '100%', height: '595px' }}
+            instanceRef={(ref) => {
+              // @ts-ignore
+              ref && ref.behaviors.disable('scrollZoom');
+            }}
+            options={{
+              minZoom: 4,
+            }}
           >
             <Placemark
               geometry={[56.772769, 60.614102]}
@@ -27,6 +34,7 @@ const ComponentMap = () => {
                 iconImageSize: [42, 42],
               }}
             />
+            <ZoomControl options={{ float: 'right' }} />
           </Map>
         </YMaps>
       </BlockMap>
