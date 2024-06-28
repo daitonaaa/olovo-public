@@ -7,6 +7,7 @@ import { Products } from '../Products';
 import { About } from '../About';
 import { Advantages } from '../Advantages';
 import { Partners } from '../Partners';
+import ComponentMap from '../Map';
 
 export const PageDefaultLayout = (props: PropsWithChildren<LayoutOwnProps>) => {
   const { children, backgroundColor, pageProps } = props;
@@ -21,6 +22,7 @@ export const PageDefaultLayout = (props: PropsWithChildren<LayoutOwnProps>) => {
         <About />
         <Advantages />
         <Partners />
+        <ComponentMap />
       </Main>
       <Footer menu={menuData['FOOTER_MENU'] || []} />
     </>
