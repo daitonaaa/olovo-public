@@ -31,8 +31,8 @@ export const Content = styled.div`
   border-top: 1px solid #4f4f4f;
 `;
 
-export const Block = styled.div<{ background: string }>`
-  background-image: url(${(props) => props.background});
+export const Block = styled.div<{ backgroundImageUrl: string }>`
+  background-image: url(${(props) => props.backgroundImageUrl});
   width: 310px;
   height: 320px;
   display: flex;

@@ -37,7 +37,7 @@ export const Advantages: React.FC = () => {
 
       <Content>
         {data.map((it) => (
-          <Block background={it.img}>
+          <Block backgroundImageUrl={it.img}>
             <Title>{it.title}</Title>
             <Desc>{it.desc}</Desc>
           </Block>
