@@ -3,11 +3,12 @@ import { Block, Title } from './styled';
 
 interface ButtonProps {
   title: string;
+  onClick: () => void;
 }
 
-export const ArrowButton: React.FC<ButtonProps> = ({ title = '' }) => {
+export const ArrowButton: React.FC<ButtonProps> = ({ title = '', onClick = () => {} }) => {
   return (
-    <Block>
+    <Block onClick={onClick}>
       <Title>{title}</Title>
       <img src="/assets/icon/arrow_button.svg" />
     </Block>

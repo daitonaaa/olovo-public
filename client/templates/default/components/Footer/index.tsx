@@ -1,6 +1,6 @@
 import { MenuRecordModel } from '@/core/admin/types';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Wrapper,
   LogoBlock,
@@ -16,6 +16,7 @@ import {
   ContactPhone,
 } from './styled';
 import { ArrowButton } from '../ArrowButton';
+import { FeedBackModal } from '../FeedBackModal';
 
 interface FooterProps {
   menu: MenuRecordModel[];
@@ -30,6 +31,11 @@ const menuData = [
 ];
 
 export const Footer: React.FC<FooterProps> = () => {
+  const [showFeedBack, setShowFeedBack] = useState<boolean>(false);
+
+  const handleFeedBack = () => {
+    setShowFeedBack(true);
+  };
   return (
     <Wrapper>
       <QuestionBlock>
@@ -37,7 +43,7 @@ export const Footer: React.FC<FooterProps> = () => {
           Вы можете задать ваш вопрос по наличию, сроку изготовления, характеристикам, размерам и
           доставке груза.
         </Text>
-        <ArrowButton title="Задать вопрос" />
+        <ArrowButton title="Задать вопрос" onClick={handleFeedBack} />
       </QuestionBlock>
       <FooterBlock>
         <LogoBlock>
@@ -81,6 +87,7 @@ export const Footer: React.FC<FooterProps> = () => {
           ))}
         </MenuBlock>
       </FooterBlock>
+      <FeedBackModal isShown={showFeedBack} hide={() => setShowFeedBack(false)} />
     </Wrapper>
   );
 };
