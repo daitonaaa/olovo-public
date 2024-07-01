@@ -19,8 +19,8 @@ export const getPageConfigByUrl = (candidate: string) => {
 export const getTextRecord = (key: string) =>
   httpAdminService.get<TextRecord>(`/textRecord/${encodeURIComponent(key)}`);
 
-export const createText = (text: string) =>
-  httpAdminService.post('/func/email', { text }, new HttpOptions().withCredentials(false));
+export const createText = (obj) =>
+  httpAdminService.post('/func/email', { obj }, new HttpOptions().withCredentials(false));
 
 export const getSettings = () =>
   httpAdminService.get<Settings>('/settings', new HttpOptions().withCredentials(false));

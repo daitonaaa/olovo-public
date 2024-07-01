@@ -10,7 +10,6 @@ export const ButtonBlock = styled.div`
 `;
 
 export const Form = styled.form`
-  /* max-width: 400px; */
   margin: 24px auto 0;
   display: flex;
   flex-direction: column;

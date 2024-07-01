@@ -19,14 +19,12 @@ interface OrderCallModalProps {
   isShown: boolean;
   hide(): void;
   title?: string;
-  orderTitle?: string;
 }
 
 export const FeedBackModal: React.FC<OrderCallModalProps> = ({
   isShown,
   hide,
   title = 'Задать вопрос',
-  orderTitle = 'Заказан звонок',
 }) => {
   const formik = useFormik({
     initialValues: {
@@ -43,16 +41,15 @@ export const FeedBackModal: React.FC<OrderCallModalProps> = ({
     }),
     onSubmit: async function (values, { resetForm }) {
       try {
-        const text = `${orderTitle}. Имя: ${values.headerModalName}, Телефон: ${values.headerModalPhone}`;
-        let obj = {
+        const obj = {
           name: values.headerModalName,
           email: values.headerModalEmail,
           phone: values.headerModalPhone,
           text: values.headerModalText,
         };
-        console.log(obj);
+
+        await createText(obj);
         hide();
-        // await createText(text);
         resetForm();
         alert('данные успешно отправлены');
       } catch (e) {
@@ -72,7 +69,7 @@ export const FeedBackModal: React.FC<OrderCallModalProps> = ({
           type={'text'}
           label={'Ваше ФИО или компания'}
           name={'headerModalName'}
-          invalid={formik.touched.headerModalName && formik.errors.headerModalName}
+          invalid={formik.touched.headerModalName && formik.errors.headerModalName ? true : false}
           onChange={formik.handleChange}
           error={'Обязательное поле'}
           value={formik.values.headerModalName}
@@ -82,7 +79,7 @@ export const FeedBackModal: React.FC<OrderCallModalProps> = ({
           type={'text'}
           label={'E-mail для ответа'}
           name={'headerModalEmail'}
-          invalid={formik.touched.headerModalEmail && formik.errors.headerModalEmail}
+          invalid={formik.touched.headerModalEmail && formik.errors.headerModalEmail ? true : false}
           onChange={formik.handleChange}
           error={'Обязательное поле'}
           value={formik.values.headerModalEmail}
@@ -110,7 +107,7 @@ export const FeedBackModal: React.FC<OrderCallModalProps> = ({
           type={'text'}
           label={'Ваш вопрос'}
           name={'headerModalText'}
-          invalid={formik.touched.headerModalText && formik.errors.headerModalText}
+          invalid={formik.touched.headerModalText && formik.errors.headerModalText ? true : false}
           onChange={formik.handleChange}
           error={'Обязательное поле'}
           value={formik.values.headerModalText}

@@ -31,10 +31,10 @@ const menuData = [
 ];
 
 export const Footer: React.FC<FooterProps> = () => {
-  const [showFeedBalck, setShowFeedBakc] = useState<boolean>(false);
+  const [showFeedBack, setShowFeedBack] = useState<boolean>(false);
 
   const handleFeedBack = () => {
-    setShowFeedBakc(true);
+    setShowFeedBack(true);
   };
   return (
     <Wrapper>
@@ -87,7 +87,7 @@ export const Footer: React.FC<FooterProps> = () => {
           ))}
         </MenuBlock>
       </FooterBlock>
-      <FeedBackModal isShown={showFeedBalck} hide={() => setShowFeedBakc(false)} />
+      <FeedBackModal isShown={showFeedBack} hide={() => setShowFeedBack(false)} />
     </Wrapper>
   );
 };

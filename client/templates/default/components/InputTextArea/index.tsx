@@ -7,12 +7,12 @@ interface IProps extends DetailedHTMLProps<HTMLAttributes<HTMLInputElement>, HTM
   type: string;
   name: string;
   label: string;
-  invalid: any;
+  invalid: boolean;
   error: string;
   textColor?: string;
   caretColor?: string;
   onChange?: (value: any) => void;
-  value: any;
+  value: string;
 }
 
 export const InputTextArea = ({

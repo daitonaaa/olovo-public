@@ -44,9 +44,6 @@ export const Input = styled.textarea<{ textColor: string; caretColor: string }>`
   caret-color: ${(props) => props.caretColor};
   resize: none;
   ${Font}
-  &:focus {
-    /* border: 1px solid ${({ theme }) => theme.palette.main}; */
-  }
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus {
